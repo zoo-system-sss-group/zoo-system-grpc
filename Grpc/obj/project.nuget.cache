@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PAcYL+8xipdFh2JSUIQWFROgs/5AJBR9x/jP/CozxiQH790z3/ql355c2PBDdxFrWafVRAsYftsiKcx91s0j7w==",
+  "dgSpecHash": "6JPckrCZ+WZqfncALLS052dp1c5VxBiixi8PXFA+utosPaAj7RLhv761I3ryHhhp8yl7/pMvRlERYKBfOVnTXQ==",
   "success": true,
   "projectFilePath": "D:\\Learning In FPT\\Ky_8\\PRN231\\group-projects\\zoo-system-grpc\\Grpc\\Grpc.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\binhn\\.nuget\\packages\\grpc.aspnetcore\\2.58.0\\grpc.aspnetcore.2.58.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\grpc.aspnetcore.server\\2.58.0\\grpc.aspnetcore.server.2.58.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.58.0\\grpc.aspnetcore.server.clientfactory.2.58.0.nupkg.sha512",
+    "C:\\Users\\binhn\\.nuget\\packages\\grpc.aspnetcore.web\\2.58.0\\grpc.aspnetcore.web.2.58.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\grpc.core.api\\2.58.0\\grpc.core.api.2.58.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\grpc.net.client\\2.58.0\\grpc.net.client.2.58.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\grpc.net.clientfactory\\2.58.0\\grpc.net.clientfactory.2.58.0.nupkg.sha512",

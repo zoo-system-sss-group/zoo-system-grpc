@@ -1,6 +1,7 @@
 ﻿using Application.IRepositories;
 using Application.Repositories;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Application;
 
@@ -17,6 +18,12 @@ public static class DependencyInjections
         services.AddScoped<IDietRepository, DietRepository>();
         services.AddScoped<ITicketRepository, TicketRepository>();
         services.AddScoped<ITicketOrderRepository, TicketOrderRepository>();
+        //IEnumerable<Type> enumerable = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.Name.EndsWith("Repository") && x.IsClass);
+        //foreach (var item in enumerable)
+        //{
+        //    var @interface= item.GetInterface("I" + item.Name);
+        //    services.AddScoped(@interface,item);
+        //}
         return services;
     }
 }
