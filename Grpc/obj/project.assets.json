@@ -141,6 +141,22 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Grpc.AspNetCore.Web/2.58.0": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/Grpc.AspNetCore.Web.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/Grpc.AspNetCore.Web.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Grpc.Core.Api/2.58.0": {
         "type": "package",
         "compile": {
@@ -1348,6 +1364,28 @@
         "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.dll",
         "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.pdb",
         "lib/net8.0/Grpc.AspNetCore.Server.ClientFactory.xml",
+        "packageIcon.png"
+      ]
+    },
+    "Grpc.AspNetCore.Web/2.58.0": {
+      "sha512": "f82/gnoMa9Sg8XbRIox+g+Iy3UxcfWEakRqNC7JfFxmo/HognOd7zdAbcxl3rgT13PdPPoVmmhIbTHpfRrHl/g==",
+      "type": "package",
+      "path": "grpc.aspnetcore.web/2.58.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "grpc.aspnetcore.web.2.58.0.nupkg.sha512",
+        "grpc.aspnetcore.web.nuspec",
+        "lib/net6.0/Grpc.AspNetCore.Web.dll",
+        "lib/net6.0/Grpc.AspNetCore.Web.pdb",
+        "lib/net6.0/Grpc.AspNetCore.Web.xml",
+        "lib/net7.0/Grpc.AspNetCore.Web.dll",
+        "lib/net7.0/Grpc.AspNetCore.Web.pdb",
+        "lib/net7.0/Grpc.AspNetCore.Web.xml",
+        "lib/net8.0/Grpc.AspNetCore.Web.dll",
+        "lib/net8.0/Grpc.AspNetCore.Web.pdb",
+        "lib/net8.0/Grpc.AspNetCore.Web.xml",
         "packageIcon.png"
       ]
     },
@@ -3173,6 +3211,7 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "Google.Protobuf >= 3.24.4",
       "Grpc.AspNetCore >= 2.58.0",
+      "Grpc.AspNetCore.Web >= 2.58.0",
       "Grpc.Tools >= 2.59.0"
     ]
   },
@@ -3237,6 +3276,10 @@
             "version": "[3.24.4, )"
           },
           "Grpc.AspNetCore": {
+            "target": "Package",
+            "version": "[2.58.0, )"
+          },
+          "Grpc.AspNetCore.Web": {
             "target": "Package",
             "version": "[2.58.0, )"
           },

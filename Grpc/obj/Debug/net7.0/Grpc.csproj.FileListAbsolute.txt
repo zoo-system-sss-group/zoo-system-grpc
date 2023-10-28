@@ -78,3 +78,5 @@ D:\Learning In FPT\Ky_8\PRN231\group-projects\zoo-system-grpc\Grpc\obj\Debug\net
 D:\Learning In FPT\Ky_8\PRN231\group-projects\zoo-system-grpc\Grpc\obj\Debug\net7.0\Grpc.genruntimeconfig.cache
 D:\Learning In FPT\Ky_8\PRN231\group-projects\zoo-system-grpc\Grpc\obj\Debug\net7.0\ref\Grpc.dll
 D:\Learning In FPT\Ky_8\PRN231\group-projects\zoo-system-grpc\Grpc\bin\Debug\net7.0\AutoMapper.dll
+D:\Learning In FPT\Ky_8\PRN231\group-projects\zoo-system-grpc\Grpc\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Learning In FPT\Ky_8\PRN231\group-projects\zoo-system-grpc\Grpc\bin\Debug\net7.0\Grpc.AspNetCore.Web.dll

@@ -2,8 +2,8 @@
 
 public enum PaymentEnum
 {
-    Momo = 0,
-    Card = 1,
-    // write some more values
-    //...
+    ZaloPay = 0,
+    Momo = 1,
+    Card = 2,
+    Cash = 3
 }

@@ -25,23 +25,25 @@ namespace Grpc {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChFQcm90b3MvbmV3cy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIq8BCgROZXdz",
-            "EgoKAmlkGAEgASgFEg0KBXRpdGxlGAIgASgJEhEKCXRodW1ibmFpbBgDIAEo",
-            "DBIPCgdjb250ZW50GAQgASgJEjEKDWNyZWF0aW9uX2RhdGUYBSABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wEjUKEW1vZGlmaWNhdGlvbl9kYXRl",
-            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCI8CgdOZXdzRFRP",
-            "Eg0KBXRpdGxlGAEgASgJEhEKCXRodW1ibmFpbBgCIAEoDBIPCgdjb250ZW50",
-            "GAMgASgJIk4KDVVwZGF0ZU5ld3NEVE8SCgoCaWQYASABKAUSDQoFdGl0bGUY",
-            "AiABKAkSEQoJdGh1bWJuYWlsGAMgASgMEg8KB2NvbnRlbnQYBCABKAkiFAoG",
-            "TmV3c0lkEgoKAmlkGAEgASgFMjwKC05ld3NTZXJ2aWNlEi0KB0dldE5ld3MS",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkaCC5OZXdzRFRPMAFCB6oCBEdycGNi",
-            "BnByb3RvMw=="));
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUv",
+            "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8iWgoHTmV3c0RUTxINCgV0aXRsZRgB",
+            "IAEoCRIvCgl0aHVtYm5haWwYAiABKAsyHC5nb29nbGUucHJvdG9idWYuU3Ry",
+            "aW5nVmFsdWUSDwoHY29udGVudBgDIAEoCSJsCg1VcGRhdGVOZXdzRFRPEgoK",
+            "AmlkGAEgASgFEg0KBXRpdGxlGAIgASgJEi8KCXRodW1ibmFpbBgDIAEoCzIc",
+            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIPCgdjb250ZW50GAQgASgJ",
+            "IiAKDVN0cmluZ01lc3NhZ2USDwoHbWVzc2FnZRgBIAEoCSIUCgZOZXdzSWQS",
+            "CgoCaWQYASABKAUy2gEKC05ld3NTZXJ2aWNlEi0KB0dldE5ld3MSFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkaCC5OZXdzRFRPMAESHwoKR2V0TmV3QnlJZBIH",
+            "Lk5ld3NJZBoILk5ld3NEVE8SJgoKQ3JlYXRlTmV3cxIILk5ld3NEVE8aDi5T",
+            "dHJpbmdNZXNzYWdlEiwKClVwZGF0ZU5ld3MSDi5VcGRhdGVOZXdzRFRPGg4u",
+            "U3RyaW5nTWVzc2FnZRIlCgpSZW1vdmVOZXdzEgcuTmV3c0lkGg4uU3RyaW5n",
+            "TWVzc2FnZUIHqgIER3JwY2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.News), global::Grpc.News.Parser, new[]{ "Id", "Title", "Thumbnail", "Content", "CreationDate", "ModificationDate" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.NewsDTO), global::Grpc.NewsDTO.Parser, new[]{ "Title", "Thumbnail", "Content" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.UpdateNewsDTO), global::Grpc.UpdateNewsDTO.Parser, new[]{ "Id", "Title", "Thumbnail", "Content" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.StringMessage), global::Grpc.StringMessage.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.NewsId), global::Grpc.NewsId.Parser, new[]{ "Id" }, null, null, null, null)
           }));
     }
@@ -49,398 +51,6 @@ namespace Grpc {
 
   }
   #region Messages
-  public sealed partial class News : pb::IMessage<News>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<News> _parser = new pb::MessageParser<News>(() => new News());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<News> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[0]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public News() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public News(News other) : this() {
-      id_ = other.id_;
-      title_ = other.title_;
-      thumbnail_ = other.thumbnail_;
-      content_ = other.content_;
-      creationDate_ = other.creationDate_ != null ? other.creationDate_.Clone() : null;
-      modificationDate_ = other.modificationDate_ != null ? other.modificationDate_.Clone() : null;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public News Clone() {
-      return new News(this);
-    }
-
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "title" field.</summary>
-    public const int TitleFieldNumber = 2;
-    private string title_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Title {
-      get { return title_; }
-      set {
-        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "thumbnail" field.</summary>
-    public const int ThumbnailFieldNumber = 3;
-    private pb::ByteString thumbnail_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString Thumbnail {
-      get { return thumbnail_; }
-      set {
-        thumbnail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "content" field.</summary>
-    public const int ContentFieldNumber = 4;
-    private string content_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Content {
-      get { return content_; }
-      set {
-        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "creation_date" field.</summary>
-    public const int CreationDateFieldNumber = 5;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp creationDate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp CreationDate {
-      get { return creationDate_; }
-      set {
-        creationDate_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "modification_date" field.</summary>
-    public const int ModificationDateFieldNumber = 6;
-    private global::Google.Protobuf.WellKnownTypes.Timestamp modificationDate_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Protobuf.WellKnownTypes.Timestamp ModificationDate {
-      get { return modificationDate_; }
-      set {
-        modificationDate_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as News);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(News other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Id != other.Id) return false;
-      if (Title != other.Title) return false;
-      if (Thumbnail != other.Thumbnail) return false;
-      if (Content != other.Content) return false;
-      if (!object.Equals(CreationDate, other.CreationDate)) return false;
-      if (!object.Equals(ModificationDate, other.ModificationDate)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
-      if (Title.Length != 0) hash ^= Title.GetHashCode();
-      if (Thumbnail.Length != 0) hash ^= Thumbnail.GetHashCode();
-      if (Content.Length != 0) hash ^= Content.GetHashCode();
-      if (creationDate_ != null) hash ^= CreationDate.GetHashCode();
-      if (modificationDate_ != null) hash ^= ModificationDate.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Title.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Title);
-      }
-      if (Thumbnail.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteBytes(Thumbnail);
-      }
-      if (Content.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Content);
-      }
-      if (creationDate_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(CreationDate);
-      }
-      if (modificationDate_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ModificationDate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
-      if (Title.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Title);
-      }
-      if (Thumbnail.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteBytes(Thumbnail);
-      }
-      if (Content.Length != 0) {
-        output.WriteRawTag(34);
-        output.WriteString(Content);
-      }
-      if (creationDate_ != null) {
-        output.WriteRawTag(42);
-        output.WriteMessage(CreationDate);
-      }
-      if (modificationDate_ != null) {
-        output.WriteRawTag(50);
-        output.WriteMessage(ModificationDate);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
-      if (Title.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
-      }
-      if (Thumbnail.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Thumbnail);
-      }
-      if (Content.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
-      }
-      if (creationDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreationDate);
-      }
-      if (modificationDate_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModificationDate);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(News other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
-      if (other.Title.Length != 0) {
-        Title = other.Title;
-      }
-      if (other.Thumbnail.Length != 0) {
-        Thumbnail = other.Thumbnail;
-      }
-      if (other.Content.Length != 0) {
-        Content = other.Content;
-      }
-      if (other.creationDate_ != null) {
-        if (creationDate_ == null) {
-          CreationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        CreationDate.MergeFrom(other.CreationDate);
-      }
-      if (other.modificationDate_ != null) {
-        if (modificationDate_ == null) {
-          ModificationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-        }
-        ModificationDate.MergeFrom(other.ModificationDate);
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            Title = input.ReadString();
-            break;
-          }
-          case 26: {
-            Thumbnail = input.ReadBytes();
-            break;
-          }
-          case 34: {
-            Content = input.ReadString();
-            break;
-          }
-          case 42: {
-            if (creationDate_ == null) {
-              CreationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreationDate);
-            break;
-          }
-          case 50: {
-            if (modificationDate_ == null) {
-              ModificationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(ModificationDate);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
-            Title = input.ReadString();
-            break;
-          }
-          case 26: {
-            Thumbnail = input.ReadBytes();
-            break;
-          }
-          case 34: {
-            Content = input.ReadString();
-            break;
-          }
-          case 42: {
-            if (creationDate_ == null) {
-              CreationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(CreationDate);
-            break;
-          }
-          case 50: {
-            if (modificationDate_ == null) {
-              ModificationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
-            }
-            input.ReadMessage(ModificationDate);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class NewsDTO : pb::IMessage<NewsDTO>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -455,7 +65,7 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -476,7 +86,7 @@ namespace Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NewsDTO(NewsDTO other) : this() {
       title_ = other.title_;
-      thumbnail_ = other.thumbnail_;
+      Thumbnail = other.Thumbnail;
       content_ = other.content_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -501,15 +111,17 @@ namespace Grpc {
 
     /// <summary>Field number for the "thumbnail" field.</summary>
     public const int ThumbnailFieldNumber = 2;
-    private pb::ByteString thumbnail_ = pb::ByteString.Empty;
+    private static readonly pb::FieldCodec<string> _single_thumbnail_codec = pb::FieldCodec.ForClassWrapper<string>(18);
+    private string thumbnail_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString Thumbnail {
+    public string Thumbnail {
       get { return thumbnail_; }
       set {
-        thumbnail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        thumbnail_ = value;
       }
     }
+
 
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 3;
@@ -549,7 +161,7 @@ namespace Grpc {
     public override int GetHashCode() {
       int hash = 1;
       if (Title.Length != 0) hash ^= Title.GetHashCode();
-      if (Thumbnail.Length != 0) hash ^= Thumbnail.GetHashCode();
+      if (thumbnail_ != null) hash ^= Thumbnail.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -573,9 +185,8 @@ namespace Grpc {
         output.WriteRawTag(10);
         output.WriteString(Title);
       }
-      if (Thumbnail.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteBytes(Thumbnail);
+      if (thumbnail_ != null) {
+        _single_thumbnail_codec.WriteTagAndValue(output, Thumbnail);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(26);
@@ -595,9 +206,8 @@ namespace Grpc {
         output.WriteRawTag(10);
         output.WriteString(Title);
       }
-      if (Thumbnail.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteBytes(Thumbnail);
+      if (thumbnail_ != null) {
+        _single_thumbnail_codec.WriteTagAndValue(ref output, Thumbnail);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(26);
@@ -616,8 +226,8 @@ namespace Grpc {
       if (Title.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
       }
-      if (Thumbnail.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Thumbnail);
+      if (thumbnail_ != null) {
+        size += _single_thumbnail_codec.CalculateSizeWithTag(Thumbnail);
       }
       if (Content.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
@@ -637,8 +247,10 @@ namespace Grpc {
       if (other.Title.Length != 0) {
         Title = other.Title;
       }
-      if (other.Thumbnail.Length != 0) {
-        Thumbnail = other.Thumbnail;
+      if (other.thumbnail_ != null) {
+        if (thumbnail_ == null || other.Thumbnail != "") {
+          Thumbnail = other.Thumbnail;
+        }
       }
       if (other.Content.Length != 0) {
         Content = other.Content;
@@ -663,7 +275,10 @@ namespace Grpc {
             break;
           }
           case 18: {
-            Thumbnail = input.ReadBytes();
+            string value = _single_thumbnail_codec.Read(input);
+            if (thumbnail_ == null || value != "") {
+              Thumbnail = value;
+            }
             break;
           }
           case 26: {
@@ -690,7 +305,10 @@ namespace Grpc {
             break;
           }
           case 18: {
-            Thumbnail = input.ReadBytes();
+            string value = _single_thumbnail_codec.Read(ref input);
+            if (thumbnail_ == null || value != "") {
+              Thumbnail = value;
+            }
             break;
           }
           case 26: {
@@ -718,7 +336,7 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -740,7 +358,7 @@ namespace Grpc {
     public UpdateNewsDTO(UpdateNewsDTO other) : this() {
       id_ = other.id_;
       title_ = other.title_;
-      thumbnail_ = other.thumbnail_;
+      Thumbnail = other.Thumbnail;
       content_ = other.content_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -777,15 +395,17 @@ namespace Grpc {
 
     /// <summary>Field number for the "thumbnail" field.</summary>
     public const int ThumbnailFieldNumber = 3;
-    private pb::ByteString thumbnail_ = pb::ByteString.Empty;
+    private static readonly pb::FieldCodec<string> _single_thumbnail_codec = pb::FieldCodec.ForClassWrapper<string>(26);
+    private string thumbnail_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString Thumbnail {
+    public string Thumbnail {
       get { return thumbnail_; }
       set {
-        thumbnail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        thumbnail_ = value;
       }
     }
+
 
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 4;
@@ -827,7 +447,7 @@ namespace Grpc {
       int hash = 1;
       if (Id != 0) hash ^= Id.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
-      if (Thumbnail.Length != 0) hash ^= Thumbnail.GetHashCode();
+      if (thumbnail_ != null) hash ^= Thumbnail.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -855,9 +475,8 @@ namespace Grpc {
         output.WriteRawTag(18);
         output.WriteString(Title);
       }
-      if (Thumbnail.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteBytes(Thumbnail);
+      if (thumbnail_ != null) {
+        _single_thumbnail_codec.WriteTagAndValue(output, Thumbnail);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(34);
@@ -881,9 +500,8 @@ namespace Grpc {
         output.WriteRawTag(18);
         output.WriteString(Title);
       }
-      if (Thumbnail.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteBytes(Thumbnail);
+      if (thumbnail_ != null) {
+        _single_thumbnail_codec.WriteTagAndValue(ref output, Thumbnail);
       }
       if (Content.Length != 0) {
         output.WriteRawTag(34);
@@ -905,8 +523,8 @@ namespace Grpc {
       if (Title.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
       }
-      if (Thumbnail.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Thumbnail);
+      if (thumbnail_ != null) {
+        size += _single_thumbnail_codec.CalculateSizeWithTag(Thumbnail);
       }
       if (Content.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
@@ -929,8 +547,10 @@ namespace Grpc {
       if (other.Title.Length != 0) {
         Title = other.Title;
       }
-      if (other.Thumbnail.Length != 0) {
-        Thumbnail = other.Thumbnail;
+      if (other.thumbnail_ != null) {
+        if (thumbnail_ == null || other.Thumbnail != "") {
+          Thumbnail = other.Thumbnail;
+        }
       }
       if (other.Content.Length != 0) {
         Content = other.Content;
@@ -959,7 +579,10 @@ namespace Grpc {
             break;
           }
           case 26: {
-            Thumbnail = input.ReadBytes();
+            string value = _single_thumbnail_codec.Read(input);
+            if (thumbnail_ == null || value != "") {
+              Thumbnail = value;
+            }
             break;
           }
           case 34: {
@@ -990,11 +613,203 @@ namespace Grpc {
             break;
           }
           case 26: {
-            Thumbnail = input.ReadBytes();
+            string value = _single_thumbnail_codec.Read(ref input);
+            if (thumbnail_ == null || value != "") {
+              Thumbnail = value;
+            }
             break;
           }
           case 34: {
             Content = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class StringMessage : pb::IMessage<StringMessage>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StringMessage> _parser = new pb::MessageParser<StringMessage>(() => new StringMessage());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StringMessage> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StringMessage() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StringMessage(StringMessage other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StringMessage Clone() {
+      return new StringMessage(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StringMessage);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StringMessage other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StringMessage other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
             break;
           }
         }
