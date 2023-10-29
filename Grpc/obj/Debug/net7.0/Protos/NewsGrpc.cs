@@ -48,29 +48,29 @@ namespace Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Grpc.NewsDTO> __Marshaller_NewsDTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.NewsDTO.Parser));
+    static readonly grpc::Marshaller<global::Grpc.UpdateNewsDTO> __Marshaller_UpdateNewsDTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.UpdateNewsDTO.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Grpc.NewsId> __Marshaller_NewsId = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.NewsId.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Grpc.StringMessage> __Marshaller_StringMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.StringMessage.Parser));
+    static readonly grpc::Marshaller<global::Grpc.NewsDTO> __Marshaller_NewsDTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.NewsDTO.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Grpc.UpdateNewsDTO> __Marshaller_UpdateNewsDTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.UpdateNewsDTO.Parser));
+    static readonly grpc::Marshaller<global::Grpc.StringMessage> __Marshaller_StringMessage = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Grpc.StringMessage.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Grpc.NewsDTO> __Method_GetNews = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Grpc.NewsDTO>(
+    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Grpc.UpdateNewsDTO> __Method_GetNews = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Grpc.UpdateNewsDTO>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "GetNews",
         __Marshaller_google_protobuf_Empty,
-        __Marshaller_NewsDTO);
+        __Marshaller_UpdateNewsDTO);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Grpc.NewsId, global::Grpc.NewsDTO> __Method_GetNewById = new grpc::Method<global::Grpc.NewsId, global::Grpc.NewsDTO>(
+    static readonly grpc::Method<global::Grpc.NewsId, global::Grpc.UpdateNewsDTO> __Method_GetNewById = new grpc::Method<global::Grpc.NewsId, global::Grpc.UpdateNewsDTO>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetNewById",
         __Marshaller_NewsId,
-        __Marshaller_NewsDTO);
+        __Marshaller_UpdateNewsDTO);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Grpc.NewsDTO, global::Grpc.StringMessage> __Method_CreateNews = new grpc::Method<global::Grpc.NewsDTO, global::Grpc.StringMessage>(
@@ -107,13 +107,13 @@ namespace Grpc {
     public abstract partial class NewsServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task GetNews(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::IServerStreamWriter<global::Grpc.NewsDTO> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task GetNews(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::IServerStreamWriter<global::Grpc.UpdateNewsDTO> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Grpc.NewsDTO> GetNewById(global::Grpc.NewsId request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Grpc.UpdateNewsDTO> GetNewById(global::Grpc.NewsId request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -158,8 +158,8 @@ namespace Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, NewsServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetNews, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Grpc.NewsDTO>(serviceImpl.GetNews));
-      serviceBinder.AddMethod(__Method_GetNewById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.NewsId, global::Grpc.NewsDTO>(serviceImpl.GetNewById));
+      serviceBinder.AddMethod(__Method_GetNews, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Grpc.UpdateNewsDTO>(serviceImpl.GetNews));
+      serviceBinder.AddMethod(__Method_GetNewById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.NewsId, global::Grpc.UpdateNewsDTO>(serviceImpl.GetNewById));
       serviceBinder.AddMethod(__Method_CreateNews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.NewsDTO, global::Grpc.StringMessage>(serviceImpl.CreateNews));
       serviceBinder.AddMethod(__Method_UpdateNews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.UpdateNewsDTO, global::Grpc.StringMessage>(serviceImpl.UpdateNews));
       serviceBinder.AddMethod(__Method_RemoveNews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.NewsId, global::Grpc.StringMessage>(serviceImpl.RemoveNews));
