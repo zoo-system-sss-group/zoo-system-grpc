@@ -18,7 +18,7 @@ public class BaseDAO<TEntity> where TEntity : BaseEntity
         var list = new List<TEntity>();
         using (var context = new AppDBContext(_configuration))
         {
-            list = await context.Set<TEntity>().ToListAsync();
+            list = await context.Set<TEntity>().Where(x => x.IsDeleted == false).OrderByDescending(x => x.CreationDate).ToListAsync();
         }
         return list;
     }
@@ -30,20 +30,21 @@ public class BaseDAO<TEntity> where TEntity : BaseEntity
         {
             entity = await context.Set<TEntity>().FindAsync(id);
         }
+        if (entity.IsDeleted) return null;
         return entity;
     }
     public IQueryable<TEntity> GetAllOdataAsync()
     {
         IQueryable<TEntity> list;
         var context = new AppDBContext(_configuration);
-        list =  context.Set<TEntity>();
+        list = context.Set<TEntity>();
         return list;
     }
     public IQueryable<TEntity> GetByIdOdataAsync(int id, bool queryAble = true)
     {
         IQueryable<TEntity> entity;
         var context = new AppDBContext(_configuration);
-        entity =  context.Set<TEntity>().Where(x => x.Id == id);
+        entity = context.Set<TEntity>().Where(x => x.Id == id);
         return entity;
     }
 

@@ -4,7 +4,6 @@ using Grpc.Core;
 using Application.IRepositories;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using AutoMapper;
-using Grpc.DTOs;
 using Domain.Entities;
 
 public class NewsServiceImpl : NewsService.NewsServiceBase
@@ -18,10 +17,10 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         _mapper = mapper;
     }
 
-    public override async Task GetNews(Empty request, IServerStreamWriter<Grpc.UpdateNewsDTO> responseStream, ServerCallContext context)
+    public override async Task GetNews(Empty request, IServerStreamWriter<Grpc.NewsDTO> responseStream, ServerCallContext context)
     {
         var news = await _repository.GetNews();
-        var newDtos = _mapper.Map<List<News>, List<Grpc.UpdateNewsDTO>>(news);
+        var newDtos = _mapper.Map<List<News>, List<Grpc.NewsDTO>>(news);
         Console.WriteLine("GetNews");
         foreach (var newsDto in newDtos)
         {
@@ -29,15 +28,15 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         }
     }
 
-    public override async Task<Grpc.UpdateNewsDTO> GetNewById(NewsId request, ServerCallContext context)
+    public override async Task<Grpc.NewsDTO> GetNewById(NewsId request, ServerCallContext context)
     {
         Console.WriteLine("GetNewById");
         var news = await _repository.GetNews(request.Id);
         if (news == null) throw new KeyNotFoundException($"news {request.Id} Not Found!");
-        var newsDto = _mapper.Map<News, Grpc.UpdateNewsDTO>(news);
+        var newsDto = _mapper.Map<News, Grpc.NewsDTO>(news);
         return newsDto;
     }
-    public override async Task<StringMessage> CreateNews(Grpc.NewsDTO request, ServerCallContext context)
+    public override async Task<StringMessage> CreateNews(Grpc.CreateNewsDTO request, ServerCallContext context)
     {
         Console.WriteLine("CreateNews");
         var news = _mapper.Map<News>(request);
