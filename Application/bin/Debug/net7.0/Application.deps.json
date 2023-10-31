@@ -48,6 +48,14 @@
           }
         }
       },
+      "Google.Protobuf/3.24.4": {
+        "runtime": {
+          "lib/net5.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.24.4.0",
+            "fileVersion": "3.24.4.0"
+          }
+        }
+      },
       "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
@@ -564,6 +572,7 @@
       "DataAccess/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "Google.Protobuf": "3.24.4",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
         },
@@ -597,6 +606,13 @@
       "sha512": "sha512-eHEiCO/8+MfNc9nH5dVew/+FvxdaGrkRL4OMNwIz0W79+wtJyEoeRlXJ3SrXhoy9XR58geBYKmzMR83VO7bcAw==",
       "path": "azure.identity/1.7.0",
       "hashPath": "azure.identity.1.7.0.nupkg.sha512"
+    },
+    "Google.Protobuf/3.24.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TmUI4ndd3x5HePyLmqAmGT6oVvoRCu+bMmrJmOpAFtCPEB+oUMWF8dyVY1zxXry/8cqsTHWszYRIAwpuUNpUyA==",
+      "path": "google.protobuf/3.24.4",
+      "hashPath": "google.protobuf.3.24.4.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
       "type": "package",

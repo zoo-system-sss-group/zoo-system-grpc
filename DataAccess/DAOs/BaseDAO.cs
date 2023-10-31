@@ -30,7 +30,7 @@ public class BaseDAO<TEntity> where TEntity : BaseEntity
         {
             entity = await context.Set<TEntity>().FindAsync(id);
         }
-        if (entity.IsDeleted) return null;
+        //if (entity?.IsDeleted ?? true) return null;
         return entity;
     }
     public IQueryable<TEntity> GetAllOdataAsync()

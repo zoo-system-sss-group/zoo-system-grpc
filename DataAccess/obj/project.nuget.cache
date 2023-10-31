@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MH/JfAsewJ04DZCdVXzVGk04+uYaqBeefqxsVI2xcw3AhknY1OXZyFby5ZyXp2igrv/P1aKqImnbdwqALsqMSg==",
+  "dgSpecHash": "icV0OjBHFqEVvoC+h3szI0W0mZdtJHXPBFqCaJEsykZpU4NyX/awoaeJb+NX9FGFkR/cMFdfFcSXc7qi/Qkakw==",
   "success": true,
   "projectFilePath": "D:\\Learning In FPT\\Ky_8\\PRN231\\group-projects\\zoo-system-grpc\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\binhn\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\binhn\\.nuget\\packages\\google.protobuf\\3.24.4\\google.protobuf.3.24.4.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

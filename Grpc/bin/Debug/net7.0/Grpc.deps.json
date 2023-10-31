@@ -642,6 +642,7 @@
       "DataAccess/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
+          "Google.Protobuf": "3.24.4",
           "Microsoft.EntityFrameworkCore.InMemory": "7.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.11"
         },

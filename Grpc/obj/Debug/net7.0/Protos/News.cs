@@ -31,23 +31,24 @@ namespace Grpc {
             "LnByb3RvYnVmLlN0cmluZ1ZhbHVlEg8KB2NvbnRlbnQYBCABKAkSMAoMY3Jl",
             "YXRpb25EYXRlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0",
             "ChBtb2RpZmljYXRpb25EYXRlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcCJsCg1DcmVhdGVOZXdzRFRPEgoKAmlkGAEgASgFEg0KBXRpdGxl",
-            "GAIgASgJEi8KCXRodW1ibmFpbBgDIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5T",
-            "dHJpbmdWYWx1ZRIPCgdjb250ZW50GAQgASgJImwKDVVwZGF0ZU5ld3NEVE8S",
-            "CgoCaWQYASABKAUSDQoFdGl0bGUYAiABKAkSLwoJdGh1bWJuYWlsGAMgASgL",
-            "MhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEg8KB2NvbnRlbnQYBCAB",
-            "KAkiIAoNU3RyaW5nTWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJIhQKBk5ld3NJ",
-            "ZBIKCgJpZBgBIAEoBTLgAQoLTmV3c1NlcnZpY2USLQoHR2V0TmV3cxIWLmdv",
-            "b2dsZS5wcm90b2J1Zi5FbXB0eRoILk5ld3NEVE8wARIfCgpHZXROZXdCeUlk",
-            "EgcuTmV3c0lkGgguTmV3c0RUTxIsCgpDcmVhdGVOZXdzEg4uQ3JlYXRlTmV3",
-            "c0RUTxoOLlN0cmluZ01lc3NhZ2USLAoKVXBkYXRlTmV3cxIOLlVwZGF0ZU5l",
-            "d3NEVE8aDi5TdHJpbmdNZXNzYWdlEiUKClJlbW92ZU5ld3MSBy5OZXdzSWQa",
-            "Di5TdHJpbmdNZXNzYWdlQgeqAgRHcnBjYgZwcm90bzM="));
+            "bWVzdGFtcCJgCg1DcmVhdGVOZXdzRFRPEg0KBXRpdGxlGAEgASgJEi8KCXRo",
+            "dW1ibmFpbBgCIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIP",
+            "Cgdjb250ZW50GAMgASgJImwKDVVwZGF0ZU5ld3NEVE8SCgoCaWQYASABKAUS",
+            "DQoFdGl0bGUYAiABKAkSLwoJdGh1bWJuYWlsGAMgASgLMhwuZ29vZ2xlLnBy",
+            "b3RvYnVmLlN0cmluZ1ZhbHVlEg8KB2NvbnRlbnQYBCABKAkiIAoNU3RyaW5n",
+            "TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJIhQKBk5ld3NJZBIKCgJpZBgBIAEo",
+            "BTKGAgoLTmV3c1NlcnZpY2USLQoHR2V0TmV3cxIWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eRoILk5ld3NEVE8wARIkCg1HZXRSYW5kb21OZXdzEgcuTmV3c0lk",
+            "GgguTmV3c0RUTzABEh8KCkdldE5ld0J5SWQSBy5OZXdzSWQaCC5OZXdzRFRP",
+            "EiwKCkNyZWF0ZU5ld3MSDi5DcmVhdGVOZXdzRFRPGg4uU3RyaW5nTWVzc2Fn",
+            "ZRIsCgpVcGRhdGVOZXdzEg4uVXBkYXRlTmV3c0RUTxoOLlN0cmluZ01lc3Nh",
+            "Z2USJQoKUmVtb3ZlTmV3cxIHLk5ld3NJZBoOLlN0cmluZ01lc3NhZ2VCB6oC",
+            "BEdycGNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.NewsDTO), global::Grpc.NewsDTO.Parser, new[]{ "Id", "Title", "Thumbnail", "Content", "CreationDate", "ModificationDate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.CreateNewsDTO), global::Grpc.CreateNewsDTO.Parser, new[]{ "Id", "Title", "Thumbnail", "Content" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.CreateNewsDTO), global::Grpc.CreateNewsDTO.Parser, new[]{ "Title", "Thumbnail", "Content" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.UpdateNewsDTO), global::Grpc.UpdateNewsDTO.Parser, new[]{ "Id", "Title", "Thumbnail", "Content" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.StringMessage), global::Grpc.StringMessage.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.NewsId), global::Grpc.NewsId.Parser, new[]{ "Id" }, null, null, null, null)
@@ -491,7 +492,6 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateNewsDTO(CreateNewsDTO other) : this() {
-      id_ = other.id_;
       title_ = other.title_;
       Thumbnail = other.Thumbnail;
       content_ = other.content_;
@@ -504,20 +504,8 @@ namespace Grpc {
       return new CreateNewsDTO(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
-    }
-
     /// <summary>Field number for the "title" field.</summary>
-    public const int TitleFieldNumber = 2;
+    public const int TitleFieldNumber = 1;
     private string title_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -529,8 +517,8 @@ namespace Grpc {
     }
 
     /// <summary>Field number for the "thumbnail" field.</summary>
-    public const int ThumbnailFieldNumber = 3;
-    private static readonly pb::FieldCodec<string> _single_thumbnail_codec = pb::FieldCodec.ForClassWrapper<string>(26);
+    public const int ThumbnailFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _single_thumbnail_codec = pb::FieldCodec.ForClassWrapper<string>(18);
     private string thumbnail_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -543,7 +531,7 @@ namespace Grpc {
 
 
     /// <summary>Field number for the "content" field.</summary>
-    public const int ContentFieldNumber = 4;
+    public const int ContentFieldNumber = 3;
     private string content_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -569,7 +557,6 @@ namespace Grpc {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
       if (Title != other.Title) return false;
       if (Thumbnail != other.Thumbnail) return false;
       if (Content != other.Content) return false;
@@ -580,7 +567,6 @@ namespace Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (thumbnail_ != null) hash ^= Thumbnail.GetHashCode();
       if (Content.Length != 0) hash ^= Content.GetHashCode();
@@ -602,19 +588,15 @@ namespace Grpc {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
       if (Title.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Title);
       }
       if (thumbnail_ != null) {
         _single_thumbnail_codec.WriteTagAndValue(output, Thumbnail);
       }
       if (Content.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteString(Content);
       }
       if (_unknownFields != null) {
@@ -627,19 +609,15 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
       if (Title.Length != 0) {
-        output.WriteRawTag(18);
+        output.WriteRawTag(10);
         output.WriteString(Title);
       }
       if (thumbnail_ != null) {
         _single_thumbnail_codec.WriteTagAndValue(ref output, Thumbnail);
       }
       if (Content.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(26);
         output.WriteString(Content);
       }
       if (_unknownFields != null) {
@@ -652,9 +630,6 @@ namespace Grpc {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
       if (Title.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
       }
@@ -675,9 +650,6 @@ namespace Grpc {
     public void MergeFrom(CreateNewsDTO other) {
       if (other == null) {
         return;
-      }
-      if (other.Id != 0) {
-        Id = other.Id;
       }
       if (other.Title.Length != 0) {
         Title = other.Title;
@@ -705,22 +677,18 @@ namespace Grpc {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
+          case 10: {
             Title = input.ReadString();
             break;
           }
-          case 26: {
+          case 18: {
             string value = _single_thumbnail_codec.Read(input);
             if (thumbnail_ == null || value != "") {
               Thumbnail = value;
             }
             break;
           }
-          case 34: {
+          case 26: {
             Content = input.ReadString();
             break;
           }
@@ -739,22 +707,18 @@ namespace Grpc {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
-            break;
-          }
-          case 18: {
+          case 10: {
             Title = input.ReadString();
             break;
           }
-          case 26: {
+          case 18: {
             string value = _single_thumbnail_codec.Read(ref input);
             if (thumbnail_ == null || value != "") {
               Thumbnail = value;
             }
             break;
           }
-          case 34: {
+          case 26: {
             Content = input.ReadString();
             break;
           }

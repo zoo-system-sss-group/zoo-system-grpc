@@ -67,6 +67,14 @@ namespace Grpc {
         __Marshaller_NewsDTO);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Grpc.NewsId, global::Grpc.NewsDTO> __Method_GetRandomNews = new grpc::Method<global::Grpc.NewsId, global::Grpc.NewsDTO>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "GetRandomNews",
+        __Marshaller_NewsId,
+        __Marshaller_NewsDTO);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Grpc.NewsId, global::Grpc.NewsDTO> __Method_GetNewById = new grpc::Method<global::Grpc.NewsId, global::Grpc.NewsDTO>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -115,6 +123,12 @@ namespace Grpc {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task GetRandomNews(global::Grpc.NewsId request, grpc::IServerStreamWriter<global::Grpc.NewsDTO> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Grpc.NewsDTO> GetNewById(global::Grpc.NewsId request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -147,6 +161,7 @@ namespace Grpc {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetNews, serviceImpl.GetNews)
+          .AddMethod(__Method_GetRandomNews, serviceImpl.GetRandomNews)
           .AddMethod(__Method_GetNewById, serviceImpl.GetNewById)
           .AddMethod(__Method_CreateNews, serviceImpl.CreateNews)
           .AddMethod(__Method_UpdateNews, serviceImpl.UpdateNews)
@@ -161,6 +176,7 @@ namespace Grpc {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, NewsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetNews, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Grpc.NewsDTO>(serviceImpl.GetNews));
+      serviceBinder.AddMethod(__Method_GetRandomNews, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Grpc.NewsId, global::Grpc.NewsDTO>(serviceImpl.GetRandomNews));
       serviceBinder.AddMethod(__Method_GetNewById, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.NewsId, global::Grpc.NewsDTO>(serviceImpl.GetNewById));
       serviceBinder.AddMethod(__Method_CreateNews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.CreateNewsDTO, global::Grpc.StringMessage>(serviceImpl.CreateNews));
       serviceBinder.AddMethod(__Method_UpdateNews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Grpc.UpdateNewsDTO, global::Grpc.StringMessage>(serviceImpl.UpdateNews));
