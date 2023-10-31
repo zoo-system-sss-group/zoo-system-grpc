@@ -26,22 +26,29 @@ namespace Grpc {
           string.Concat(
             "ChFQcm90b3MvbmV3cy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnBy",
             "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUv",
-            "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8iWgoHTmV3c0RUTxINCgV0aXRsZRgB",
-            "IAEoCRIvCgl0aHVtYm5haWwYAiABKAsyHC5nb29nbGUucHJvdG9idWYuU3Ry",
-            "aW5nVmFsdWUSDwoHY29udGVudBgDIAEoCSJsCg1VcGRhdGVOZXdzRFRPEgoK",
-            "AmlkGAEgASgFEg0KBXRpdGxlGAIgASgJEi8KCXRodW1ibmFpbBgDIAEoCzIc",
-            "Lmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIPCgdjb250ZW50GAQgASgJ",
-            "IiAKDVN0cmluZ01lc3NhZ2USDwoHbWVzc2FnZRgBIAEoCSIUCgZOZXdzSWQS",
-            "CgoCaWQYASABKAUy2gEKC05ld3NTZXJ2aWNlEi0KB0dldE5ld3MSFi5nb29n",
-            "bGUucHJvdG9idWYuRW1wdHkaCC5OZXdzRFRPMAESHwoKR2V0TmV3QnlJZBIH",
-            "Lk5ld3NJZBoILk5ld3NEVE8SJgoKQ3JlYXRlTmV3cxIILk5ld3NEVE8aDi5T",
-            "dHJpbmdNZXNzYWdlEiwKClVwZGF0ZU5ld3MSDi5VcGRhdGVOZXdzRFRPGg4u",
-            "U3RyaW5nTWVzc2FnZRIlCgpSZW1vdmVOZXdzEgcuTmV3c0lkGg4uU3RyaW5n",
-            "TWVzc2FnZUIHqgIER3JwY2IGcHJvdG8z"));
+            "cHJvdG9idWYvd3JhcHBlcnMucHJvdG8izgEKB05ld3NEVE8SCgoCaWQYASAB",
+            "KAUSDQoFdGl0bGUYAiABKAkSLwoJdGh1bWJuYWlsGAMgASgLMhwuZ29vZ2xl",
+            "LnByb3RvYnVmLlN0cmluZ1ZhbHVlEg8KB2NvbnRlbnQYBCABKAkSMAoMY3Jl",
+            "YXRpb25EYXRlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0",
+            "ChBtb2RpZmljYXRpb25EYXRlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcCJgCg1DcmVhdGVOZXdzRFRPEg0KBXRpdGxlGAEgASgJEi8KCXRo",
+            "dW1ibmFpbBgCIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5TdHJpbmdWYWx1ZRIP",
+            "Cgdjb250ZW50GAMgASgJImwKDVVwZGF0ZU5ld3NEVE8SCgoCaWQYASABKAUS",
+            "DQoFdGl0bGUYAiABKAkSLwoJdGh1bWJuYWlsGAMgASgLMhwuZ29vZ2xlLnBy",
+            "b3RvYnVmLlN0cmluZ1ZhbHVlEg8KB2NvbnRlbnQYBCABKAkiIAoNU3RyaW5n",
+            "TWVzc2FnZRIPCgdtZXNzYWdlGAEgASgJIhQKBk5ld3NJZBIKCgJpZBgBIAEo",
+            "BTKGAgoLTmV3c1NlcnZpY2USLQoHR2V0TmV3cxIWLmdvb2dsZS5wcm90b2J1",
+            "Zi5FbXB0eRoILk5ld3NEVE8wARIkCg1HZXRSYW5kb21OZXdzEgcuTmV3c0lk",
+            "GgguTmV3c0RUTzABEh8KCkdldE5ld0J5SWQSBy5OZXdzSWQaCC5OZXdzRFRP",
+            "EiwKCkNyZWF0ZU5ld3MSDi5DcmVhdGVOZXdzRFRPGg4uU3RyaW5nTWVzc2Fn",
+            "ZRIsCgpVcGRhdGVOZXdzEg4uVXBkYXRlTmV3c0RUTxoOLlN0cmluZ01lc3Nh",
+            "Z2USJQoKUmVtb3ZlTmV3cxIHLk5ld3NJZBoOLlN0cmluZ01lc3NhZ2VCB6oC",
+            "BEdycGNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.NewsDTO), global::Grpc.NewsDTO.Parser, new[]{ "Title", "Thumbnail", "Content" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.NewsDTO), global::Grpc.NewsDTO.Parser, new[]{ "Id", "Title", "Thumbnail", "Content", "CreationDate", "ModificationDate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.CreateNewsDTO), global::Grpc.CreateNewsDTO.Parser, new[]{ "Title", "Thumbnail", "Content" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.UpdateNewsDTO), global::Grpc.UpdateNewsDTO.Parser, new[]{ "Id", "Title", "Thumbnail", "Content" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.StringMessage), global::Grpc.StringMessage.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grpc.NewsId), global::Grpc.NewsId.Parser, new[]{ "Id" }, null, null, null, null)
@@ -85,6 +92,406 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NewsDTO(NewsDTO other) : this() {
+      id_ = other.id_;
+      title_ = other.title_;
+      Thumbnail = other.Thumbnail;
+      content_ = other.content_;
+      creationDate_ = other.creationDate_ != null ? other.creationDate_.Clone() : null;
+      modificationDate_ = other.modificationDate_ != null ? other.modificationDate_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NewsDTO Clone() {
+      return new NewsDTO(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private int id_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Id {
+      get { return id_; }
+      set {
+        id_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "title" field.</summary>
+    public const int TitleFieldNumber = 2;
+    private string title_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Title {
+      get { return title_; }
+      set {
+        title_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "thumbnail" field.</summary>
+    public const int ThumbnailFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _single_thumbnail_codec = pb::FieldCodec.ForClassWrapper<string>(26);
+    private string thumbnail_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Thumbnail {
+      get { return thumbnail_; }
+      set {
+        thumbnail_ = value;
+      }
+    }
+
+
+    /// <summary>Field number for the "content" field.</summary>
+    public const int ContentFieldNumber = 4;
+    private string content_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Content {
+      get { return content_; }
+      set {
+        content_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "creationDate" field.</summary>
+    public const int CreationDateFieldNumber = 5;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp creationDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreationDate {
+      get { return creationDate_; }
+      set {
+        creationDate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "modificationDate" field.</summary>
+    public const int ModificationDateFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp modificationDate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ModificationDate {
+      get { return modificationDate_; }
+      set {
+        modificationDate_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NewsDTO);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NewsDTO other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Title != other.Title) return false;
+      if (Thumbnail != other.Thumbnail) return false;
+      if (Content != other.Content) return false;
+      if (!object.Equals(CreationDate, other.CreationDate)) return false;
+      if (!object.Equals(ModificationDate, other.ModificationDate)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id != 0) hash ^= Id.GetHashCode();
+      if (Title.Length != 0) hash ^= Title.GetHashCode();
+      if (thumbnail_ != null) hash ^= Thumbnail.GetHashCode();
+      if (Content.Length != 0) hash ^= Content.GetHashCode();
+      if (creationDate_ != null) hash ^= CreationDate.GetHashCode();
+      if (modificationDate_ != null) hash ^= ModificationDate.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Title);
+      }
+      if (thumbnail_ != null) {
+        _single_thumbnail_codec.WriteTagAndValue(output, Thumbnail);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Content);
+      }
+      if (creationDate_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreationDate);
+      }
+      if (modificationDate_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ModificationDate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(Id);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Title);
+      }
+      if (thumbnail_ != null) {
+        _single_thumbnail_codec.WriteTagAndValue(ref output, Thumbnail);
+      }
+      if (Content.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Content);
+      }
+      if (creationDate_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CreationDate);
+      }
+      if (modificationDate_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ModificationDate);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
+      }
+      if (Title.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Title);
+      }
+      if (thumbnail_ != null) {
+        size += _single_thumbnail_codec.CalculateSizeWithTag(Thumbnail);
+      }
+      if (Content.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Content);
+      }
+      if (creationDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreationDate);
+      }
+      if (modificationDate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModificationDate);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NewsDTO other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id != 0) {
+        Id = other.Id;
+      }
+      if (other.Title.Length != 0) {
+        Title = other.Title;
+      }
+      if (other.thumbnail_ != null) {
+        if (thumbnail_ == null || other.Thumbnail != "") {
+          Thumbnail = other.Thumbnail;
+        }
+      }
+      if (other.Content.Length != 0) {
+        Content = other.Content;
+      }
+      if (other.creationDate_ != null) {
+        if (creationDate_ == null) {
+          CreationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreationDate.MergeFrom(other.CreationDate);
+      }
+      if (other.modificationDate_ != null) {
+        if (modificationDate_ == null) {
+          ModificationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ModificationDate.MergeFrom(other.ModificationDate);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Title = input.ReadString();
+            break;
+          }
+          case 26: {
+            string value = _single_thumbnail_codec.Read(input);
+            if (thumbnail_ == null || value != "") {
+              Thumbnail = value;
+            }
+            break;
+          }
+          case 34: {
+            Content = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (creationDate_ == null) {
+              CreationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreationDate);
+            break;
+          }
+          case 50: {
+            if (modificationDate_ == null) {
+              ModificationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModificationDate);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Id = input.ReadInt32();
+            break;
+          }
+          case 18: {
+            Title = input.ReadString();
+            break;
+          }
+          case 26: {
+            string value = _single_thumbnail_codec.Read(ref input);
+            if (thumbnail_ == null || value != "") {
+              Thumbnail = value;
+            }
+            break;
+          }
+          case 34: {
+            Content = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (creationDate_ == null) {
+              CreationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreationDate);
+            break;
+          }
+          case 50: {
+            if (modificationDate_ == null) {
+              ModificationDate = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ModificationDate);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class CreateNewsDTO : pb::IMessage<CreateNewsDTO>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateNewsDTO> _parser = new pb::MessageParser<CreateNewsDTO>(() => new CreateNewsDTO());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateNewsDTO> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNewsDTO() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateNewsDTO(CreateNewsDTO other) : this() {
       title_ = other.title_;
       Thumbnail = other.Thumbnail;
       content_ = other.content_;
@@ -93,8 +500,8 @@ namespace Grpc {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public NewsDTO Clone() {
-      return new NewsDTO(this);
+    public CreateNewsDTO Clone() {
+      return new CreateNewsDTO(this);
     }
 
     /// <summary>Field number for the "title" field.</summary>
@@ -138,12 +545,12 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as NewsDTO);
+      return Equals(other as CreateNewsDTO);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(NewsDTO other) {
+    public bool Equals(CreateNewsDTO other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -240,7 +647,7 @@ namespace Grpc {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(NewsDTO other) {
+    public void MergeFrom(CreateNewsDTO other) {
       if (other == null) {
         return;
       }
@@ -336,7 +743,7 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -644,7 +1051,7 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -833,7 +1240,7 @@ namespace Grpc {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Grpc.NewsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

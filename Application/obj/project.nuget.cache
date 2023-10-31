@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "CVRV4TAPjkT1NyAn1gq6bPbSnL8ysOfvTXGExYzd4nTVe3oRXTUl7iL5u8D3WpfT4cGeET/jx15vkGO8T7l4iw==",
+  "dgSpecHash": "54ku2qCMqgiJa0KJvxv4zvwc+oXNDMWVsjTYti0dUzydJxA9bm8Uiw60593BYbYq2kXdUREOr9ut52+OCBXuaQ==",
   "success": true,
   "projectFilePath": "D:\\Learning In FPT\\Ky_8\\PRN231\\group-projects\\zoo-system-grpc\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\binhn\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\binhn\\.nuget\\packages\\google.protobuf\\3.24.4\\google.protobuf.3.24.4.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\binhn\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
