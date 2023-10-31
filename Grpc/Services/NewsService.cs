@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.Infrastructure;
 using AutoMapper;
 using Domain.Entities;
 using DataAccess.Utils;
+using System;
 
 public class NewsServiceImpl : NewsService.NewsServiceBase
 {
@@ -25,25 +26,18 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         foreach (var @new in news)
         {
             var newsDto = Map(@new);
-            Console.WriteLine(newsDto.ToString().Substring(1, 100) +"...");
+            Console.WriteLine(string.Concat(newsDto.ToString().AsSpan(1, 100), "..."));
             await responseStream.WriteAsync(newsDto);
         }
     }
     public override async Task GetRandomNews(NewsId request, IServerStreamWriter<NewsDTO> responseStream, ServerCallContext context)
     {
-        var news = await _repository.GetNews();
-        news.Remove(news.First(x => x.Id == request.Id));
-        while (news.Count > 10)
-        {
-            var index = Random.Shared.Next(0, news.Count - 1);
-            news.RemoveAt(index);
-        }
-
+        var news = await _repository.GetRandomNews(request.Id);
         Console.WriteLine("GetRandomNews");
         foreach (var @new in news)
         {
             var newsDto = Map(@new);
-            Console.WriteLine(newsDto.ToString().Substring(1, 100) + "...");
+            Console.WriteLine(string.Concat(newsDto.ToString().AsSpan(1, 100), "..."));
             await responseStream.WriteAsync(newsDto);
         }
     }
@@ -61,7 +55,7 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         Console.WriteLine("CreateNews: " + request);
         var news = _mapper.Map<News>(request);
         await _repository.AddNews(news);
-        return new StringMessage { Message = "News Created!" };
+        return new StringMessage { Message = $"News {news.Title} Created!" };
     }
     public override async Task<StringMessage> UpdateNews(UpdateNewsDTO request, ServerCallContext context)
     {
@@ -69,7 +63,7 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         var news = await _repository.GetNews(request.Id);
         news = _mapper.Map<UpdateNewsDTO, News>(request, news);
         await _repository.UpdateNews(news);
-        return new StringMessage { Message = "News Updated!" };
+        return new StringMessage { Message = $"News {news.Title} Updated!" };
     }
     public override async Task<StringMessage> RemoveNews(NewsId request, ServerCallContext context)
     {
@@ -77,7 +71,7 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         var news = await _repository.GetNews(request.Id);
         _ = news ?? throw new Exception($"News {request.Id} Not Found!");
         await _repository.DeleteNews(news);
-        return new StringMessage { Message = "News Removed!" };
+        return new StringMessage { Message = $"News {news.Title} Removed!" };
     }
     private NewsDTO Map(News news)
     {
