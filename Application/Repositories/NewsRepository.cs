@@ -22,7 +22,7 @@ public class NewsRepository : INewsRepository
         {
             news.Remove(news.First(x => x.Id == id));
         }
-        news.OrderBy(x => EF.Functions.Random()).Take(10);
+        news = news.OrderBy(x => Guid.NewGuid()).Take(10).ToList();
         return news;
     }
     public async Task<News?> GetNews(int id) => await _newsDao.GetByIdAsync(id);

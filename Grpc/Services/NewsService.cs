@@ -7,6 +7,9 @@ using AutoMapper;
 using Domain.Entities;
 using DataAccess.Utils;
 using System;
+using System.Text.Json;
+using System.Data;
+using Microsoft.IdentityModel.Tokens;
 
 public class NewsServiceImpl : NewsService.NewsServiceBase
 {
@@ -53,6 +56,11 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
     public override async Task<StringMessage> CreateNews(Grpc.CreateNewsDTO request, ServerCallContext context)
     {
         Console.WriteLine("CreateNews: " + request);
+
+        var user = await GetUser(context.RequestHeaders.GetValue("authorization") ?? "");
+        if (user == null) throw new UnauthorizedAccessException("user not logined"); 
+        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new SecurityTokenInvalidAlgorithmException($"{user.Role} not allowed to use this method"); 
+     
         var news = _mapper.Map<News>(request);
         await _repository.AddNews(news);
         return new StringMessage { Message = $"News {news.Title} Created!" };
@@ -60,6 +68,11 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
     public override async Task<StringMessage> UpdateNews(UpdateNewsDTO request, ServerCallContext context)
     {
         Console.WriteLine("UpdateNews: " + request);
+        var user = await GetUser(context.RequestHeaders.GetValue("authorization") ?? "");
+        
+        if (user == null) throw new UnauthorizedAccessException("user not logined");
+        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new SecurityTokenInvalidAlgorithmException($"{user.Role} not allowed to use this method");
+       
         var news = await _repository.GetNews(request.Id);
         news = _mapper.Map<UpdateNewsDTO, News>(request, news);
         await _repository.UpdateNews(news);
@@ -68,6 +81,10 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
     public override async Task<StringMessage> RemoveNews(NewsId request, ServerCallContext context)
     {
         Console.WriteLine($"RemoveNews: {request.Id}");
+        var user = await GetUser(context.RequestHeaders.GetValue("authorization") ?? "");
+        if (user == null) throw new UnauthorizedAccessException("user not logined");
+        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new SecurityTokenInvalidAlgorithmException($"{user.Role} not allowed to use this method");
+     
         var news = await _repository.GetNews(request.Id);
         _ = news ?? throw new Exception($"News {request.Id} Not Found!");
         await _repository.DeleteNews(news);
@@ -80,5 +97,21 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         if (news.ModificationDate != null)
             newDtos.ModificationDate = DateTimeConverter.ToTimeSpamp(news.ModificationDate.Value);
         return newDtos;
+    }
+    private async Task<Account?> GetUser(string token)
+    {
+        var client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+        var response = await client.GetAsync("https://localhost:7195/api/auth/current-user");
+        if (response.IsSuccessStatusCode)
+        {
+            var strData = await response.Content.ReadAsStringAsync();
+            return JsonSerializer.Deserialize<Account>(strData) ?? null;
+        }
+        if (response.StatusCode == (System.Net.HttpStatusCode)401)
+        {
+            return null;
+        }
+        return null;
     }
 }
