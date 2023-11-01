@@ -10,16 +10,19 @@ using System;
 using System.Text.Json;
 using System.Data;
 using Microsoft.IdentityModel.Tokens;
+using DataAccess.Commons;
 
 public class NewsServiceImpl : NewsService.NewsServiceBase
 {
     public required INewsRepository _repository;
     public required IMapper _mapper;
+    private readonly AppConfiguration _configuration;
 
-    public NewsServiceImpl(INewsRepository repository, IMapper mapper)
+    public NewsServiceImpl(INewsRepository repository, IMapper mapper,AppConfiguration configuration)
     {
         _repository = repository;
         _mapper = mapper;
+        _configuration = configuration;
     }
 
     public override async Task GetNews(Empty request, IServerStreamWriter<Grpc.NewsDTO> responseStream, ServerCallContext context)
@@ -58,9 +61,9 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         Console.WriteLine("CreateNews: " + request);
 
         var user = await GetUser(context.RequestHeaders.GetValue("authorization") ?? "");
-        if (user == null) throw new UnauthorizedAccessException("user not logined"); 
-        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new SecurityTokenInvalidAlgorithmException($"{user.Role} not allowed to use this method"); 
-     
+        if (user == null) throw new RpcException(new Status(StatusCode.Unauthenticated, "User not logged in"));
+        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new RpcException(new Status(StatusCode.PermissionDenied, $"{user.Role} not allowed to use this method"));
+
         var news = _mapper.Map<News>(request);
         await _repository.AddNews(news);
         return new StringMessage { Message = $"News {news.Title} Created!" };
@@ -69,11 +72,12 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
     {
         Console.WriteLine("UpdateNews: " + request);
         var user = await GetUser(context.RequestHeaders.GetValue("authorization") ?? "");
-        
-        if (user == null) throw new UnauthorizedAccessException("user not logined");
-        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new SecurityTokenInvalidAlgorithmException($"{user.Role} not allowed to use this method");
-       
+
+        if (user == null) throw new RpcException(new Status(StatusCode.Unauthenticated, "User not logged in"));
+        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new RpcException(new Status(StatusCode.PermissionDenied, $"{user.Role} not allowed to use this method"));
+
         var news = await _repository.GetNews(request.Id);
+        _ = news ?? throw new RpcException(new Status(StatusCode.Aborted, $"News {request.Id} Not Found!"));
         news = _mapper.Map<UpdateNewsDTO, News>(request, news);
         await _repository.UpdateNews(news);
         return new StringMessage { Message = $"News {news.Title} Updated!" };
@@ -82,11 +86,11 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
     {
         Console.WriteLine($"RemoveNews: {request.Id}");
         var user = await GetUser(context.RequestHeaders.GetValue("authorization") ?? "");
-        if (user == null) throw new UnauthorizedAccessException("user not logined");
-        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new SecurityTokenInvalidAlgorithmException($"{user.Role} not allowed to use this method");
+        if (user == null) throw new RpcException(new Status(StatusCode.Unauthenticated, "User not logged in"));
+        if (user.Role != Domain.Enums.RoleEnum.Staff) throw new RpcException(new Status(StatusCode.PermissionDenied, $"{user.Role} not allowed to use this method"));
      
         var news = await _repository.GetNews(request.Id);
-        _ = news ?? throw new Exception($"News {request.Id} Not Found!");
+        _ = news ?? throw new RpcException( new Status(StatusCode.Aborted,$"News {request.Id} Not Found!"));
         await _repository.DeleteNews(news);
         return new StringMessage { Message = $"News {news.Title} Removed!" };
     }
@@ -102,7 +106,7 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
     {
         var client = new HttpClient();
         client.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
-        var response = await client.GetAsync("https://localhost:7195/api/auth/current-user");
+        var response = await client.GetAsync(_configuration.AuthorizationAPIs.CurrentUser);
         if (response.IsSuccessStatusCode)
         {
             var strData = await response.Content.ReadAsStringAsync();
@@ -112,6 +116,6 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         {
             return null;
         }
-        return null;
+        throw new RpcException(new Status(StatusCode.Aborted, "Main server not loaded!"));
     }
 }
