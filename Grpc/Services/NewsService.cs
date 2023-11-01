@@ -25,10 +25,10 @@ public class NewsServiceImpl : NewsService.NewsServiceBase
         _configuration = configuration;
     }
 
-    public override async Task GetNews(Empty request, IServerStreamWriter<Grpc.NewsDTO> responseStream, ServerCallContext context)
+    public override async Task GetNews(Search request, IServerStreamWriter<Grpc.NewsDTO> responseStream, ServerCallContext context)
     {
-        var news = await _repository.GetNews();
-        Console.WriteLine("GetNews");
+        Console.WriteLine($"GetNews: {request. Search_}");
+        var news = await _repository.GetNews(request.Search_);
         foreach (var @new in news)
         {
             var newsDto = Map(@new);

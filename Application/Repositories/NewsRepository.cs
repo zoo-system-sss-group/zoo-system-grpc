@@ -14,7 +14,7 @@ public class NewsRepository : INewsRepository
         _newsDao = newsDao;
     }
 
-    public async Task<List<News>> GetNews() => await _newsDao.GetAllAsync();
+    public async Task<List<News>> GetNews(string search) => await _newsDao.GetAllAsync(search);
     public async Task<List<News>> GetRandomNews(int? id)
     {
         var news = await _newsDao.GetAllAsync();
