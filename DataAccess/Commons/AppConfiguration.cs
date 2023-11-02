@@ -6,6 +6,7 @@ public class AppConfiguration
     public JwtConfiguration JwtConfiguration { get; set; } = default!;
     public EmailSetting EmailSetting { get; set; } = default!;
     public TicketTypeInformation TicketTypeInformation { get; set; } = default!;
+    public AuthorizationAPIs AuthorizationAPIs { get; set; } = default!;
 }
 
 #region Classes
@@ -28,6 +29,9 @@ public class EmailSetting
     public string DisplayName { get; set; } = default!;
 }
 
+public class AuthorizationAPIs {
+    public string CurrentUser { get; set; } = default!;
+}
 public class TicketTypeInformation
 {
     public string AdultTicketPrice { get; set; } = default!;
